@@ -1,0 +1,15 @@
+#ALGORITMO162
+#Criar um algoritmo que imprima todos os números pares no intervalo 1-10
+
+prog algoritmo162
+       int count;
+       int n1;
+       
+       n1 <- 0;
+       para (count <- 0; n1 < 10; count++)
+       {
+          n1 <- n1+2;
+          imprima "Numeros pares: ", n1, "\n";
+       }
+
+fimprog

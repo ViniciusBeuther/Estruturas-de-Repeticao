@@ -1,0 +1,11 @@
+#ALGORITMO180
+#Imprimir os numeros de 120 ate 300
+
+prog algoritmo180
+       int c;
+       para(c <- 120; c <= 300; c++)
+       {
+       imprima c, "\n";
+       }
+
+fimprog

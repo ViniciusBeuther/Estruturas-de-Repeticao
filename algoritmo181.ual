@@ -1,0 +1,15 @@
+#ALGORITMO181
+#Escreva um programa que mostre os numeros até 100 e a soma deles
+
+prog algoritmo181
+       int c, soma;
+       soma <- 0;
+       
+       para (c <- 0; c <= 100; c++)
+       {
+        soma <- soma + c;
+        
+       }
+       imprima "\nSOMA: ", soma, "\n";
+
+fimprog

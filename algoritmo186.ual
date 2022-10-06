@@ -1,0 +1,22 @@
+#ALGORITMO186
+#Entrar com 4 numeros e mostrar o cubo e a raiz cubica de cada numero
+
+prog algoritmo186
+       int c, n;
+       
+           para (c <- 0; c < 4; c++)
+           {
+           imprima "\nDigite um numero: ";
+           leia n;
+                se (n < 0)
+                {
+                imprima "Valor invalido! Tente novamente!";
+                }
+                senao
+                {
+                imprima "\nRaiz Cubica: ", n **(1/3);
+                imprima "\nCubo: ", n ^ 3;
+                }
+           }
+       
+fimprog

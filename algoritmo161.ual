@@ -1,0 +1,19 @@
+#ALGORITMO161
+#Criar um algoritmo que entre com cinco números e imprimir o quadrado de cada 
+#número.
+
+prog algoritmo161
+       int i;
+       int n1;
+       
+       para (i <- 0; i < 5; i++)
+       {
+        imprima "Digite um numero: ";
+        leia n1;
+        imprima "\nQuadrado: ", n1 ^ 2, "\n\n";        
+       }
+
+       
+       imprima "\n\n";
+
+fimprog

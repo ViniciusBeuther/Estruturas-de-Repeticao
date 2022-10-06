@@ -1,0 +1,12 @@
+#ALGORITMO179
+#Imprimir os numeros pares entre 1 e 600
+
+prog algoritmo179
+       int c;
+       imprima "PARES ENTRE 1-600:\n";
+       para (c<-2; c <= 600; c<- c+2)
+       {
+       imprima c, "\n";
+       }
+
+fimprog

@@ -1,0 +1,11 @@
+#ALGORITMO176
+#Imprimir os 100 primeiros pares. 
+
+prog algoritmo176
+       int c;
+       para (c <- 0; c <= 100; c <- (c+2))
+       {
+        imprima c, "\n";
+       }
+
+fimprog

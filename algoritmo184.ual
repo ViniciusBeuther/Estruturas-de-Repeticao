@@ -1,0 +1,18 @@
+#ALGORITMO184
+#Entrar com 8 numeros e para cada numero imprimir 
+#o logaritmo desse numero na base 10
+#log (numerodesejado) / log (base);
+
+prog algoritmo184
+       int c, n1;
+       
+       para (c <- 0; c < 8; c++)
+       {
+            imprima "\nDigite um numero: ";
+            leia n1;
+            imprima "Log na base 10: ", formatar(log(n1) / log (10), 3);
+            imprima "\n";
+       }
+       
+
+fimprog

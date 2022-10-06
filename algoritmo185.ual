@@ -1,0 +1,13 @@
+#ALGORITMO185
+#Entrar com 15 numeros e imprimir a raiz dos mesmos
+
+prog algoritmo185
+       int c, n;
+           para (c <- 0; c < 15; c++)
+           {
+           imprima "\nDigite um numero: ";
+           leia n;
+           imprima "Raiz quadrada: ", formatar(raiz(n),2), "\n";
+           }
+
+fimprog 

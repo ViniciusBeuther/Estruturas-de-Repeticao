@@ -1,0 +1,11 @@
+#ALGORITMO174
+#Imprimir todos os números de 1 até 100. 
+
+prog algoritmo174
+     int c;
+     para (c <- -101 ; c <= -100; c++)
+     {
+      imprima "\n", c;
+     }
+
+fimprog

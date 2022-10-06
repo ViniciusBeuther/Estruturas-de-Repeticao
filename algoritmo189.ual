@@ -1,0 +1,37 @@
+#ALGORITMO189
+#Criar um algoritmo que imprima a tabela de conversão de graus
+#Celsius-Fahrenheit para o intervalo desejado pelo usuário. 
+#O algoritmo deve solicitar ao usuário o li-mite superior, o limite inferior
+#do intervalo e  o decremento. 
+#Fórmula de conversão: C =5 (F-32) I 9 
+#Exemplo: valores lidos: 68 50 14 
+#impressão: 
+
+prog algoritmo189
+   int c, limitesuperior, limiteinferior, decremento;
+   real temp;
+   imprima "TABELA DE CONVERSAO";
+   imprima "\nDigite o limite inferior: ";
+   leia limiteinferior;
+   imprima "\nDigite o limite superior: ";
+   leia limitesuperior;
+   imprima "\nDigite o valor de decremento: ";
+   leia decremento;
+   
+        se (limiteinferior > limitesuperior)
+        {
+        imprima "\nERRO!\n";
+        }
+        
+        senao
+        {
+             imprima "FAHRENHEINT        CELSIUS\n";
+             para (c <- limiteinferior; c <= limitesuperior; c <- (c+decremento))
+             {
+             temp <- (c-32) * 5/ 9; 
+             imprima c, "           ",temp, "\n"; 
+             
+             }
+        }
+
+fimprog

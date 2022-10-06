@@ -1,0 +1,13 @@
+#ALGORITMO178
+#Imprimir o quadrado dos numero de 1 ate 20
+
+prog algoritmo178
+    int c;
+    imprima "Quadrados de 1 - 20\n";
+    
+            para(c <- 1; c <= 20; c++)
+            {
+            imprima c*c, "\n";
+            }
+
+fimprog

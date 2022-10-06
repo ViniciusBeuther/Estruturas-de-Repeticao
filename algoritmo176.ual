@@ -1,0 +1,12 @@
+#ALGORITMO177
+#Imprimir os múltiplos de 5, no intervalo de 1 até 500. 
+
+prog algoritmo177
+       int c;
+       imprima "MULTIPLOS DE 5 MENORES QUE 500: \n";
+       para (c <- 0; c <= 500; c<-c+5)
+       {
+       imprima c, "\n"; 
+       }
+       imprima "\n\n";
+fimprog

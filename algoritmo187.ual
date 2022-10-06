@@ -1,0 +1,29 @@
+#ALGORITMO187
+#Criar um algoritmo que calcule e imprima o valor de b^n. 
+#O valor de n deverá ser maior do que 1 e  
+#inteiro e o valor de b  maior ou igual a 2 e inteiro. 
+
+prog algoritmo187
+         int n, b;
+         imprima "Digite o valor da base: ";
+         leia b;
+         imprima "Digite o valor do numerador: ";
+         leia n;
+
+              se (n < 1)
+              {
+               imprima "\nERRO!\n";
+              }
+                senao
+                {
+                 se (b < 2)
+                 {
+                  imprima "\nERRO!\n";
+                 }
+                          senao
+                          {
+                           imprima "\nValor de B^N: ", b^n, "\n";
+                          }
+                }
+
+fimprog

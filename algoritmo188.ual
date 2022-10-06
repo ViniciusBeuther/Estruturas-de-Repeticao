@@ -1,0 +1,17 @@
+#ALGORITMO188
+#Criar um algoritmo que imprima uma 
+#tabela de conversão de polegadas para cen-tímetros. 
+#Deseja-se que na tabela conste valores desde 
+#1 polegada até 20 polega-das inteiras.
+
+prog algoritmo188
+       int c;
+       real polegada;
+       polegada <- 0.0;       
+            para(c <- 1; c <= 20; c++)
+            {
+             polegada <- 25.4 * c;
+             imprima c, " Polegada(s) = ", formatar(polegada,2), " mm\n"; 
+            }
+
+fimprog 
