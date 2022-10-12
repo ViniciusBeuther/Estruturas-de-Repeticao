@@ -1,0 +1,19 @@
+#ALGORITMO196
+#Crie um algoritmo que leia um limite superior e apresente a soma dos
+#dos numeros multiplos de 5 dentro desse intervalor (1-limitesuperior)
+
+prog algoritmo196
+     int count, limite, soma;
+     soma <- 0;     
+     imprima "\nDigite o limite superior: ";
+     leia limite;
+          para (count <- 0; count < limite; count <- (count + 5))
+          {
+           se (count % 5 == 0)
+           {
+           soma <- soma + count;
+           } 
+          }
+     imprima "\nSOMA: ", soma, "\n\n";
+
+fimprog

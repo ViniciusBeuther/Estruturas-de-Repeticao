@@ -1,0 +1,13 @@
+#ALGORITMO193
+#Criar um algoritmo que leia um numero que servira para controlar os numeros pares que sera impressos a partir de 2
+
+prog algoritmo193
+       int count, limite, aux;
+       imprima "\nDigite quantos pares depois do 2: ";
+       leia limite;
+            para(count <- 2; count <= (limite*2); count<- (count+2))
+            {
+             imprima count, "\n";
+            }
+
+fimprog

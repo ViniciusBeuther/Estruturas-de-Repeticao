@@ -1,0 +1,22 @@
+#ALGORITMO202
+#Criar um algoritmo que leia um número (num) da entrada e 
+#imprima os múltiplos de 3 e 5 ao mesmo tempo no intervalo de 1 a num.
+
+prog algoritmo202
+       int count, limite;
+       
+       imprima "\nDigite o limite: ";
+       leia limite;
+       
+       imprima "\nNUMEROS DO INTERVALO MULTIPLOS DE 3 E DE 5";
+        
+            para(count <- 1; count <= limite; count++)
+            {
+                       se(count % 3 == 0 && count % 5 == 0)
+                       {
+                        imprima "\n", count;
+                       }
+            }
+            imprima "\n\n";
+
+fimprog 

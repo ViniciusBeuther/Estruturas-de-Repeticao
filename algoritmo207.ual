@@ -1,0 +1,28 @@
+#ALGORITMO207
+#Sabendo-se que o UAL calcula o produto atraves de somas sucessivas, criar um
+#algoritmo que calcule o produto de dois numeros inteiros lidos. SUponha que os 
+#numeros lidos sejam positivos e que o multiplicando seja menor que o multiplicador
+
+prog algoritmo207
+       int multiplicador, multiplicando, i;
+       
+       para(i <- 0; i < 10; i++)
+       {
+       imprima "\nDigite o valor do multiplicador: ";
+       leia multiplicador;
+       
+       imprima "\nDigite o valor do mutiplicando: ";
+       leia multiplicando;
+                
+            se (multiplicando > multiplicador)
+            {
+             imprima "\nERRO!\n\n";
+            }
+            
+            senao
+            {
+             imprima "\nProduto: ", multiplicador * multiplicando;
+            }
+            imprima "\n\n";
+        }
+fimprog

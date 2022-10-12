@@ -1,0 +1,22 @@
+#ALGORITMO198
+#criar um algoritmo que leia os limites inferior e superior
+#de um intervalo e imprima todos os numeros naturais no intervalo fechado.
+#Suponha que os dados digitados sao para um intervalo crescente
+
+prog algoritmo198
+     int count, limitesuperior, limiteinferior;
+     
+     imprima "\nDigite o limite superior: ";
+     leia limitesuperior;
+     
+     imprima "\nDigite o limite inferior: ";
+     leia limiteinferior;
+     
+     imprima "\nINTERVALO DE NUMEROS NATURAIS: \n";
+          para (count <- limiteinferior; count < limitesuperior; count++)
+          {
+          imprima "\n", count;
+          }
+          
+     imprima "\n\n";
+fimprog

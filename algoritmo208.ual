@@ -1,0 +1,16 @@
+#ALGORITMO208
+#Crie um algoritmo que imprima os 10 primeiros termos da serie de fibonacci.
+#observação: os dois primeiros termos desta serie sao 1 e 1, os demais sao
+#gerados a partir da soma dos anteriores
+
+prog algoritmo208
+       int i, sequencia;
+       sequencia <- 1;
+       imprima "1 ";
+       para(i <- 0;i<10;i++)
+       {
+       sequencia <- sequencia + i;
+       imprima "\t ", sequencia;
+       }
+       imprima"\n\n";
+fimprog

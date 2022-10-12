@@ -1,0 +1,29 @@
+#ALGORITMO200
+#Criar um algoritmo que leia os limites inferior e superior de um intervalo 
+#e o nú-mero cujos múltiplos se deseja que sejam impressos no intervalo aberto. 
+#Supo-nha que os dados digitados são para um intervalo crescente.
+
+prog algoritmo200
+       int count, limiteinferior, limitesuperior, intervalo;
+       
+       imprima "\nDigite o limite inferior: ";
+       leia limiteinferior;
+       
+       imprima "\nDigite o limite superior: ";
+       leia limitesuperior;
+       
+       imprima "\nDigite o intervalor: ";
+       leia intervalo;
+       
+            para (count <- limiteinferior+1; count < limitesuperior; count++)
+            {
+                 se(count % intervalo == 0)
+                 {
+                  imprima "\n", count;
+                 }
+            }
+            
+       imprima "\n\n";
+            
+
+fimprog

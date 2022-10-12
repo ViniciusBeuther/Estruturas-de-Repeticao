@@ -1,0 +1,21 @@
+#ALGORITMO203
+#Criar um algoritmo que leia um número (num) da entrada. 
+#Em seguida, ler n nú-meros da entrada e imprimir 
+#o triplo de cada um
+
+prog algoritmo203
+       int count, numero, valor;
+       
+       imprima "Digite quantos numeros voce quer digitar: ";
+       leia numero;
+       
+            para (count <- 1; count <= numero; count++)
+            {
+             imprima "\nDigite um numero: ";
+             leia valor;
+             imprima "\nTRIPLO: ", valor*3, "\n";
+            }
+            
+            imprima "\n\n";
+
+fimprog

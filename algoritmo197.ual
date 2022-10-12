@@ -1,0 +1,23 @@
+#ALGORITMO197
+#Crie um algoritmo que leia um numero que servira para controlar os 
+#primeiros numneros impares. Deve ser impressa a soma desses numeros
+
+prog algoritmo197
+     int count, soma, numero;
+     
+     imprima "\nDigite um numero: ";
+     leia numero;
+     soma <- 0;
+          imprima "Primeiros ", numero, " Numeros impares\n";
+          para (count <- 0; count <= (numero * 2); count++)
+          {
+               se(count % 2 <> 0)
+               {
+               soma <- soma + count;
+               imprima  count, "\n";
+               }
+          }
+               imprima "\nSoma dos valores: ", soma;
+     imprima "\n\n";
+
+fimprog

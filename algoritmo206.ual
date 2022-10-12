@@ -1,0 +1,36 @@
+#ALGORITMO206
+
+prog algoritmo206
+       int i, repeticao, maior, menor, valoratual, valoranterior, aux, aux2;
+       
+       imprima "\nDigite a quantidade de numeros que deseja digitar: ";
+       leia repeticao;
+       
+       imprima "\nDigite um numero: ";
+       leia valoranterior;
+       maior <- valoranterior;
+       menor <- valoranterior;
+       
+       para(i <- 1; i < repeticao; i++)
+       {
+              imprima "\nDigite um numero: ";
+              leia valoratual;
+              
+              se (valoratual > maior)
+              {
+              aux <- valoratual;
+              maior <- aux;
+              }
+              
+              se (valoratual < menor)
+              {
+              aux2 <- valoratual;
+              menor <- aux2;
+              }
+              
+              
+       }
+       imprima maior;
+       imprima "\n", menor, "\n";
+
+fimprog

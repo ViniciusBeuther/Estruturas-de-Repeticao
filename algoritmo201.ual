@@ -1,0 +1,28 @@
+#ALGORITMO201
+#Criar um algoritmo que leia os limites inferior e superior de um
+#intervalo e impri-ma todos os números pares no intervalo aberto e 
+#seu somatório. Suponha que os dados digitados são para um intervalo crescente.
+
+prog algoritmo201
+       int count, limitesuperior, limiteinferior, soma;
+       soma <- 0;
+       
+       imprima "\nDigite o limite inferior: ";
+       leia limiteinferior;
+       
+       imprima "\nDigite o limite superior: ";
+       leia limitesuperior;
+       
+       imprima "\nNUMEROS PARES NO INTERVALO: \n";
+            para(count <- limiteinferior; count < limitesuperior; count++)
+            {
+                       se(count % 2 ==0)
+                       {
+                       soma <- soma + count;
+                        imprima "\n", count;
+                       }
+            }
+            
+            imprima "\nSOMA: ", soma, "\n\n";
+
+fimprog

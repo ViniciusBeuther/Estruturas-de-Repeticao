@@ -1,0 +1,12 @@
+#ALGORITMO177
+#Imprimir os multiplos de 5 no intervalo de 1 ate 500
+
+prog algoritmo177
+       int i;
+       para(i<-5;i<= 500; i <- i+5)
+       {
+       imprima i, "\t";              
+       }
+       imprima "\n\n";
+
+fimprog

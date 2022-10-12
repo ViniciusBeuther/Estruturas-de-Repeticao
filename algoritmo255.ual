@@ -1,0 +1,45 @@
+#ALGORITMO255
+#Uma escola tem 5 turmas e cada uma tem n alunos. Criar um algoritmo que imprima
+#por turma, total de alunos com media superior a 7 e a media geral da escola
+
+prog algoritmo255
+       int i, maior7, quantidadealunos, j, aux;
+       real nota, media, notatotal;
+              
+       maior7 <- 0;
+       notatotal <- 0.0;
+       aux <- 0;       
+       
+       imprima "\nDigite o numero de alunos por turma: ";
+       leia quantidadealunos;
+
+       
+       para(i <- 1; i <= 5; i++)    #5 TURMAS
+       {
+              imprima "\nTURMA 0", i;
+              para(j <- 0; j < quantidadealunos; j++)
+              {
+                    imprima "\nDigite sua nota: ";
+                    leia nota;
+                    
+                                       
+                    se (nota >= 7.0)
+                    {
+                     maior7 <- maior7 ;
+                     aux <- aux + 1;
+                    }
+                    maior7 <- 0;
+                    notatotal <- (notatotal+nota);
+
+              }
+              imprima "\nNotas maiores que 7 na turma 0", i, ": ", aux;
+              imprima "\n\n";
+              aux <- 0;
+       }
+       
+              media <- notatotal / (quantidadealunos * 5);
+        
+       imprima "\n\tA media total das notas da escola e: ", formatar(media, 2);
+       imprima "\n\n";
+
+fimprog

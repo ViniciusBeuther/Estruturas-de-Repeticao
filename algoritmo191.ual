@@ -1,0 +1,20 @@
+#ALGORITMO191
+#Criar um algoritmo que leia um numero que sera o limite superior de um intervalor e o incremento.
+#Imprimir todos os numeros naturais no intervalo de 0 até o limite. Suponha os dois numeros lidos sao maiores que 0
+
+prog algoritmo191
+     int count, limitesuperior, incremento;
+     
+      imprima "\nDigite o limite superior: ";
+      leia limitesuperior;
+      imprima "\nDigite o valor de incremento: ";
+      leia incremento;
+      imprima "\nVALORES";
+     para (count <- 0; count <= limitesuperior; count <- (count + incremento) )
+     {
+     imprima "\n", count;
+     }
+     imprima "\n\n";
+
+
+fimprog

@@ -1,0 +1,19 @@
+#ALGORITMO250
+#Imprimir todas as tabuadas de multiplicar de 1 ate o 10
+
+prog algoritmo250
+       int i, j;
+       
+       para (i <- 1; i <= 10; i++)
+       {
+           para (j<- 1; j <=10; j++)
+           {
+            imprima j, " x ", i, " = ", j*i, "\n";
+           }
+        
+       }
+              
+              imprima "\n\n"; 
+              
+
+fimprog

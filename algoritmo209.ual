@@ -1,0 +1,41 @@
+#ALGORITMO209
+#A serie de RICCI difere da serie de FIBONACCI porque os dois primeiros termos sao
+#fornecidos pelo usuario. Os demais termos sao gerados da mesma forma que 
+#a serie de de FIBONACCI. Criar um algoritmo que imprima os n primeiros
+#termos da serie de rRICCI e a soma dos termos impressos, sabendo-se que 
+#par aexistir esta sequencia sera necessario pelo menos tres termos;
+
+prog algoritmo209
+       int i, primeiro, segundo, termos, soma;
+       soma <- 0;
+       
+       imprima "\nDigite o primeiro valor: ";
+       leia primeiro;
+       
+       imprima "\nDigite o segundo valor: ";
+       leia segundo;
+       
+       imprima "\nQual a quantidade de termos que deseja ver: ";
+       leia termos;
+
+            se (primeiro > segundo)
+            {
+            imprima "\nERROR 404! \n";
+            }
+            
+            senao
+            {
+                imprima " ", primeiro, "  \n ", segundo, "  ";
+                para(i <- 0; i < termos; i++)
+                {
+                
+                segundo <- segundo + i;
+                soma <- soma + segundo;
+                
+                imprima "\n ", segundo;
+                }
+                imprima "\nA soma e: ", soma + primeiro;
+            }
+       imprima "\n\n";
+
+fimprog
