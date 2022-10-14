@@ -1,0 +1,30 @@
+#ALGORITMO211
+#Crie um algoritmo que imprima todos os numeros inteiros positivos no intervalo aberto entre 10 e 100 de modo que:
+# > Nao terminem em zero                > Se o digito da direita for removido o numero restante e divisor do numero original
+
+prog algoritmo211
+       int i, valoranterior, aux;
+       
+       para (i<- 10; i < 100; i++)
+       {
+            se (i%10 <> 0)
+            {
+            valoranterior <- i div 10;
+            
+               se (i % valoranterior == 0 )
+               {
+               imprima i, " e divisivel por ", valoranterior, "\n" ;
+               }
+               
+               senao
+               {
+              
+               }
+               aux <- i;
+               valoranterior <- aux;
+               
+            }
+       
+       }
+
+fimprog

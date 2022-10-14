@@ -1,0 +1,42 @@
+#ALGORITMO210
+#A serie de FETUCCINE é gerada da seguinte forma: Os dois primeiros termos sao fornecidos pelo usuario; a partir dai os termos sao gerados com a soma
+# ou subtracao dos dois termos anteriores. Crie um algoritmo que imprima os 10 primeiros termos da serie de FETUCCINE
+
+
+prog algoritmo210
+       int i, a1, a2, termo, condicao;
+       
+       imprima "\nDigite o primeiro termo: ";
+       leia a1;
+       
+       imprima "\nDigite o segundo termo: ";
+       leia a2;
+        
+       condicao <- a1 + a2;    
+            # Par
+            se(condicao % 2 == 0)
+            {
+                     para(i <- 0; i < 10; i++)
+                     {
+                       termo <- a1 + a2;
+                       a1 <- a2;
+                       a2 <- termo;
+                       imprima termo, "\n ";     
+                     }
+             
+            }
+            
+            # Impar
+            senao
+            {
+            
+                     para(i <- 0; i < 10; i++)
+                     {
+                      termo <- a1 - a2;
+                      a1 <- a2;
+                      a2 <- termo; 
+                      imprima termo, "\n ";
+                     }
+            }
+
+fimprog
