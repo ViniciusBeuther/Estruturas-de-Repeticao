@@ -1,0 +1,27 @@
+#ALGORITMO264
+#Entrar com varios numeros positivos e imprimir a media dos numeros digitados
+
+prog algoritmo264
+       int cont, soma, n;
+       cont <- 0;
+       soma <- 0;
+       n <- 0;
+       faca
+       {
+       se (n < 0)
+       {        
+                imprima "\nFIM"; 
+       }
+       senao
+       {
+           cont++;
+           soma <- soma + n;
+           imprima "\nDigite um numero (negativo para encerrar): ";
+           leia n;
+       }
+       }
+       enquanto (n >= 0)
+
+       imprima "\n\nMedia: ", soma/(cont-1);
+       imprima "\n\n";
+fimprog

@@ -1,0 +1,67 @@
+#Algoritmo283
+# Uma agencia de uma cidade do interior tem, no maximo, 10.000 clientes.
+# Criar um algoritmo que possa entrar com o numero da conta, nome e saldo de cada cliente
+# Imprimir todas as contas, os respectuvis saldos e uma mensagem: positivo/negativo. 
+# A digitação acaba quando se digita -999 para numero da conta ou quando chegar a 10.000
+# Ao final, devera sair o total de clientes com saldo negativo, total de clientes da agente e o saldo da agencia
+
+prog algoritmo283
+       int clientescont, numconta, negativocont;
+       real saldo, saldoagencia;
+       string nome, situacao;
+       
+       clientescont <- 0;
+       numconta <- 0;
+       negativocont <- 0;
+       saldoagencia <- 0.0;
+       enquanto (clientescont <= 10000 && numconta <> -999)
+       {
+                           
+       imprima "\nDigite o numero da conta: ";
+       leia numconta;
+        
+           se(numconta <> -999)
+           {
+                clientescont++;
+                
+                imprima "\nDigite seu nome: ";
+                leia nome;
+                
+                imprima "\nDigite o seu saldo: ";
+                leia saldo; 
+                
+                # Soma total do saldo
+                saldoagencia <- saldo + saldoagencia;
+                
+                     # caso positivo
+                     se(saldo > 0.0)
+                     {
+                      situacao <- "Positivo";
+                     }
+                     
+                     # caso negativo
+                     senao
+                     {
+                      situacao <- "Negativo";
+                      negativocont++;
+                     }
+                   imprima "\nSeu nome: ", nome;
+                   imprima "\nSeu saldo 
+                                      
+           }
+           
+           senao
+           {
+                imprima "\nVOCE SAIU! \n";
+           }
+           
+       }
+       
+       imprima "\nINFORMACOES \n";
+       imprima "\nTotal de clientes: ", clientescont;
+       imprima "\nTotal de clientes negativados: ", negativocont;
+       imprima "\nSaldo da agencia: ", saldoagencia;
+       imprima "\n\n";
+
+
+fimprog

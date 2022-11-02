@@ -1,0 +1,82 @@
+#ALGORITMO273
+
+#Uma empresa de fornecimento de energia eletrica faz a leitura mensal dos
+#medidores de consumo. Para cada consumidor, sao digitados os seguintes dados:
+# - Numero do consumidos / -Quantidade de kWh consumidos durante o mes
+# - Tipo (código) do consumidor
+    # - residencial, ´preço em reais kWh = 0.3
+    # - comercial, preço em reais kWh = 0.5
+    # - industrial, preço em reais kWh = 0.7
+# Os dados devem ser lidos ate que seja encontrado um consumidos com o numero 0. Calcular e imprimir
+     # O custo total para cada consumidor
+     # O total de consumo para os tres tipos de consumidos
+     # A media de consumo dos tipos 1 e 2
+     
+prog algoritmo273
+     int consumidor, tipo, cont;
+     real consumo, total, totalconsumo, mediaconsumo;
+     cont <- 0;
+     total <- 0.0;
+     mediaconsumo <- 0.0;
+     totalconsumo <- 0.0;
+     consumidor <- 1;
+     
+     enquanto (consumidor <> 0)
+     {
+                   imprima "\nDigite seu numero de consumidor: ";
+                   leia consumidor;
+                   
+                        se (consumidor == 0)
+                        {
+                         imprima "\nCONSUMIDOR 0! \n";
+                         consumo <- 0.0;
+                        }
+      senao
+      {
+                   
+                   imprima "\nDigite a quantidade de consumo mensal em kWh: ";
+                   leia consumo;
+     
+                   imprima "\nDigite o tipo de consumidor (1) residencial, (2) Comercial e (3) Industrial: ";
+                   leia tipo;
+     
+              # Residencial
+              se (tipo == 1)
+              {
+               total <- total + consumo*0.3;
+               totalconsumo <- totalconsumo + consumo;
+               mediaconsumo <- mediaconsumo + consumo;
+               cont++;
+               imprima "\nGasto do consumidor ", consumidor, ": R$", consumo*0.3;
+               imprima "\n\n";
+              }
+              
+              # Comercial
+              se(tipo == 2)
+              {
+              total <- total + consumo*0.5;
+              totalconsumo <- totalconsumo + consumo;
+              mediaconsumo <- mediaconsumo + consumo;
+              cont++;
+              imprima "\nGasto do consumidor ", consumidor, ": R$", consumo*0.5;
+              imprima "\n\n";
+              }
+              
+              # Industrial
+              se(tipo == 3)
+              {
+              total <- total + consumo*0.7;
+              totalconsumo <- totalconsumo + consumo;
+              mediaconsumo <- mediaconsumo + consumo;
+              imprima "\nGasto do consumidor ", consumidor, ": R$", consumo*0.7;
+              imprima "\n\n";
+              }
+      }
+      
+     }
+     
+     imprima "\nCusto total: R$", total;
+     imprima "\nTotal de consumo: ", totalconsumo, " kWh";
+     imprima "\nMedia de consumo do tipo 1 e 2: ", mediaconsumo/cont, " kWh";
+     imprima "\n\n";
+fimprog

@@ -1,0 +1,23 @@
+#ALGORITMO263
+#Entrar com numeros enquanto forem postivios e imprimir quanto numero foram digitados
+
+prog algoritmo263
+       int numero, cont;
+       cont <- 1;
+       imprima "Digite um numero ou algum negativo para acabar: ";
+       leia numero;
+       
+            enquanto (numero >= 0)
+            {
+             imprima "contador: ", cont;
+             cont++;
+             imprima "\n";
+             imprima "\nDigite um numero ou algum negativo para acabar: ";
+             leia numero;
+                      
+            }
+            
+            imprima "\nTOTAL DE NUMEROS DIGITADOS: ", cont-1;
+            imprima "\n\n";
+
+fimprog

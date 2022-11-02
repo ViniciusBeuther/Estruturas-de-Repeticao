@@ -1,0 +1,53 @@
+#ALGORITMO335
+#A prefeitura de Pelotas resolveu fazer uma pesquisa sobre algumas características físicas de sua população e coletou os seguintes dados, referentes a cada habitante, para serem analisados:
+#- Sexo (masculino, feminino);
+#- Cor dos olhos (azuis, verdes, castanhos);
+#- Cor dos cabelos (louros, castanhos, pretos);
+#- Idade em anos.
+#Para cada habitante, foi preenchida uma ficha com os dados acima. criar um algoritmo que determine e imprima:
+#a) A maior idade dos habitantes;
+#b) Porcentagem de indivíduos do sexo feminino cuja idade esteja entre 18 e 35 anos, inclusive, e que tenha olhos verdes e cabelos louros.
+
+prog algoritmo335
+       int sexo, olhos, cabelos, idade, cont, fcont, n, i, maior, aux, flag;
+       imprima "\nDigite o numero de pesssoas a serem entrevistadas: ";
+       leia n;
+       cont <- 0;
+       flag <- 0;
+       fcont <- 0;
+       para (i <- 0; i < n; i++)
+       {
+        cont++;
+        imprima "\nDigite o sexo (1-Masculino, 0-Feminino): ";
+        leia sexo;
+        imprima "\nDigite sua idade: ";
+        leia idade;
+             se (flag == 0)
+             {
+              aux <- idade;
+              maior<- aux;
+              flag <- 1;
+             }
+             se (idade > maior)
+             {
+              aux <- idade;
+              maior <- aux;
+             }
+             
+       imprima "\nDigite a cor do seus olhos (1-Azul, 2-Verdes e 3-Castanhos): ";
+       leia olhos;
+       imprima "\nDigite a cor do seu cabelo (1-Louros, 2-Castanhos e 3-Pretos): ";
+       leia cabelos;
+       
+            se (sexo == 0 && idade >= 18 && idade <= 35 && olhos == 2 && cabelos == 1)
+            {
+             fcont++;
+            }
+        
+       }
+       imprima "\n\nA maior idade e : ", maior, " anos ";
+       imprima "\nMedia de mulheres entre 18 e 35 anos com olhos verdes e cabelos louros: ", fcont * 100/cont, "%";
+       imprima "\n\n";
+       
+
+fimprog

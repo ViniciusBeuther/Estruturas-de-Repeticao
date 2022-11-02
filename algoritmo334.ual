@@ -1,0 +1,66 @@
+#ALGORITMO334
+#Num frigorifico existe varios bois. Cada boi traz preso ao seu pescoço um cartao contendo um numero
+#de identificacao e seu peso. Implementar um algoritmo que escreva o numero
+#e o peso do boi mais gordo e do mais magro. O algoritmo 
+#acaba quando se digita um numero menor ou igual a zero para identificacao
+
+prog algoritmo334
+
+     int flag, n, nmaior, nmenor,naux;
+     real peso, maior, menor, aux;
+     flag <- 0;
+      n <- 1;
+     enquanto (n > 0)
+     {
+     imprima "\nDigite o numero do boi: ";
+     leia n;
+          se (n <= 0)
+          {
+           n <- 0;
+          }
+          senao
+          {
+           imprima "\nDigite o peso do boi: ";
+           leia peso;
+           se (flag == 0)
+           {
+            maior <- peso;
+            menor <- peso;
+            flag <- 1;
+           }
+           
+           senao
+           {
+                se (peso > maior)
+                {
+                 aux <- peso;
+                 maior <- aux;
+                 naux <- n;
+                 nmaior <- naux;
+                 
+                }
+                
+                se (peso < menor)
+                {
+                 aux <- peso;
+                 menor <- aux;
+                 naux <- n;
+                 nmenor <- naux;
+                 
+                }
+           }
+          }
+     
+     
+     
+     }
+
+          
+     
+     
+
+              imprima "\nO boi mais pesado e o numero ", nmaior, " Pesando ", maior, " kg";
+              
+              imprima "\nO boi mais leve e o numero ", nmenor, " Pesando  ", menor, " kg\n\n";
+              
+fimprog

@@ -1,0 +1,84 @@
+#ALGORITMO309
+
+#Faça um algoritmo que calcule o salário e o imposto de renda de um grupo de pessoas, 
+#considerando:
+#a) Para cada pessoa tem-se: Nome, Número de Dependentes, Renda Bruta Anual;
+#b) O imposto é calculado segundo a tabela abaixo:
+#    Renda Liquida            %
+#    até R$ 10.000,00            isento
+#    > R$ 10.000,00 até R$ 30.000,00    5%
+#    > R$ 30.000,00 até R$ 60.000,00     10%
+#    > R$ 60.000,00            15%
+#    > não aceitar valores negativos.
+#c) Há um desconto de R$ 600,00 para cada dependente.
+#d) Sendo que a renda liquida é igual a renda bruta menos o abatimento de cada 
+#dependente.
+#e) O algoritmo encerra ao se digitar "FIM" para nome.
+
+prog algoritmo309
+       string nome, condicao;
+       int dependentes, i, pessoas;
+       real brutoanual, liquido, imposto, soma;
+       soma <- 0.0;
+       
+       imprima "\nDeseja iniciar o programa (Sim, Nao): ";
+       leia condicao;
+       
+            enquanto (strprim (condicao) == "S" || strprim (condicao) == "s")
+            {
+                imprima "\nQuantas pessoas deseja digitar: ";
+                leia pessoas;
+                para (i <- 1; i <= pessoas; i++)
+                {     
+                     imprima "\nDigite seu nome: ";
+                     leia nome;
+                     
+                     imprima "\nDigite a renda anual bruta: ";
+                     leia brutoanual;
+                     
+                          se (brutoanual < 0.0)
+                          {
+                           imprima "\nInvalido\n!";
+                           condicao <- "s";
+                          }
+                          
+                          senao
+                          {
+                           imprima "\nQuantos dependentes: ";
+                           leia dependentes;
+                           
+                           liquido <- brutoanual - (600.0 * dependentes);
+                           soma <- soma + liquido;
+                           
+                                   se (soma <= 10000.0)
+                                   {
+                                    imposto <- 0.0;
+                                   }
+                                   
+                                   se (soma > 10000.0 && liquido <= 30000.0)
+                                   {
+                                    imposto <- soma * 0.05;
+                                   }
+                                   
+                                   se (liquido > 30000.0 && liquido <= 60000.0)
+                                   {
+                                    imposto <- soma * 0.1;
+                                   }
+                                   
+                                   se (liquido > 60000.0)
+                                   {
+                                    imposto <- soma * 0.15;
+                                   }
+                          }
+                 }         
+                          imprima "----------INFORMACOES----------\n";
+                          imprima "\nValor do seu imposto de renda: R$", imposto;
+                          imprima "\nValor do salario liquido mensal: R$", soma/12;
+                          imprima "\nRenda anual liquida total: ", soma;
+                          
+                          imprima "\n\nDeseja continuar (Sim, Nao): ";
+                          leia condicao;
+                               
+            }
+        
+fimprog

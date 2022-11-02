@@ -1,0 +1,34 @@
+#Extra002
+
+#Faça um programa para ler um numero entre 1 e 10 apenas, mostrar a tabuada deste 
+#numero. O programa se
+#encerra quando se digitar "FIM"; e deve apresentar uma mensagem de término do programa.
+
+prog extra002
+       int i, j, num;
+       string continuar;
+       
+       imprima "\nDeseja iniciar o programa de tabuadas (Sim, Nao): ";
+       leia continuar;
+       
+       enquanto (strprim (continuar) == "S" || strprim (continuar) == "s")
+       {
+        imprima "\nDigite a tabuada desejada: ";
+        leia num;
+             para (i <- num; i <= num; i++)
+             {
+                  para (j <- 0; j <= 10; j++)
+                  {
+                       imprima "\n", i, " x ", j, " = ", i*j;
+                  }
+             }
+       imprima "\n\nDeseja continuar o programa de tabuadas (Sim, Nao): ";
+       leia continuar;
+       }
+       
+       se (strprim (continuar) == "n" || strprim (continuar) == "N")
+       {
+        imprima "\nFINALIZADO!\n";
+       }
+
+fimprog

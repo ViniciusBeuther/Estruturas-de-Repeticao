@@ -1,0 +1,82 @@
+#DESAFIO - SLIDE FOR (EXERCICIO 01)
+
+#Feita uma pesquisa entre os habitantes de uma regiao e coletados os dados
+#de altura e sexo(0 - masc e 1 = fem) das pessoas.raiz Faça um programa que 
+# leia 50 dados diferentes e informe: 
+#      -Maior e menor altura
+#      -Media de altura das mulheres
+#      -Media de altura da população
+#      -o percentual de homens na população
+
+prog desafio01
+       int gcont, i, fcont, cont, sexo, flag;
+       real altura, fmedia, gmedia, maior, menor;
+       flag <- 0;
+       
+            para(i <- 0; i < 2; i++)
+            {  
+            
+             imprima "\nDigite seu sexo Feminino (1) ou Masculo (0): ";
+             leia sexo;
+            
+             imprima "\nDigite sua altura (em metros): ";
+             leia altura;
+             
+             
+                   se(flag == 0)
+                   {
+                      gcont <- 0;
+                      fcont <- 0;
+                      cont <- 0;
+                      maior <- altura;
+                      menor <- altura;
+                      flag <- 1;
+                      fmedia <- 0.0;
+                      gmedia <- 0.0;
+                   }
+                   
+                   # Maior altura
+                   se (altura > maior)
+                   {
+                      maior <- altura;
+                   }
+                   
+                   # Menor altura
+                   se (altura < menor)
+                   {
+                      menor <- altura;
+                   }
+                   
+                   
+                   # Se sexo for invalido
+                   se(sexo <> 1 && sexo <> 0)
+                   {
+                    imprima " \nSEXO INVALIDO!\n\n";
+                   }
+                   
+                   senao 
+                   {     # Mulheres
+                         se(sexo == 1)
+                         {
+                            fmedia <- altura + fmedia;
+                            gmedia <- altura + gmedia;
+                            fcont++;
+                         }
+                         
+                         senao 
+                         {
+                            gmedia <- altura + gmedia;
+                            cont++; # Cont macho
+                         }
+                   }
+                   
+                    gcont++;
+            }               
+
+            imprima "\nMaior altura: ", maior, " metros";
+            imprima "\nMenor altura: ", menor, " metros";
+            imprima "\nMedia geral de altura: ", formatar((gmedia / gcont),2);
+            imprima "\nMedia da altura das mulheres: ", formatar((fmedia / fcont), 2);
+            imprima "\nPercentual de homens: ", (cont * 100) / gcont, "%";
+            imprima "\n\n";
+fimprog

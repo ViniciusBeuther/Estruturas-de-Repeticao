@@ -1,0 +1,53 @@
+#ALGORITMO282
+#Emtrar com o numero da conta e o saldo de varias pessoas, imprimir todas as contas, os respectivos saldos e a mensagem positivo/negativo.
+# Ao final, o percentual de pessoas com saldo negativo. Acaba quando digita um numero de conta negativo
+
+prog algoritmo282
+       int conta, cont, negcont, flag;
+       string situacao, nome;
+       real saldo, soma;
+        flag <- 0;
+        saldo <- 0.0;
+        cont <- 0;
+        negcont <- 0;
+        conta <- 0;
+        
+        enquanto (conta <> -999 || conta <= 10000)
+        {
+                 
+                  cont++;
+                  imprima "\nDigite sua conta: ";
+                  leia conta;
+                  
+                  se (conta <> -999 || conta <= 10000)
+                  {
+                  
+                  
+                  imprima "\nDigite seu saldo: ";
+                  leia saldo;
+                  
+                  }
+                  senao
+                  {
+                       se(saldo >= 0.0)
+                       {
+                        situacao <- "POSITIVO";
+                        soma <- soma + saldo;
+                       }
+                       senao
+                       {
+                        situacao <- "NEGATIVO";
+                        negcont++;
+                       }
+                  
+                 }
+                 
+                 imprima "\nSaldo: ", saldo;
+                 imprima "\nSituacao: ", situacao;
+                 imprima "\n\n";
+        }
+
+        imprima "\nSaldo do banco: R$", soma;
+        imprima "\nPorcentual de negativados: ", (negcont*100)/cont;
+
+fimprog

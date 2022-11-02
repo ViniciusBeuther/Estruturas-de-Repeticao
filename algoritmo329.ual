@@ -1,0 +1,84 @@
+#Em uma eleição presidencial, existem quatro candidatos. Os votos são 
+#informados através de código. Os dados utilizados para a escrutina gem obedecem à seguinte codificação: 
+#    22, 30, 27, 15 = voto para os respectivos candidatos; 
+#    5 = voto nulo; 
+#    6 = voto em branco; 
+#     0 PARA ENCERRAR
+# Elaborar um algoritmo que calcule e imprima: 
+#          total de votos para cada candidato: 
+#          total de votos nulos; 
+#          total de votos em branco, 
+#          percentual dos votos em branco e nulos sobre o total 
+
+prog algoritmo329
+     int voto, ncont, bcont, tcont, cont22, cont30, cont27, cont15;
+     ncont <- 0;
+     bcont <- 0;
+     tcont <- 0;
+     cont22 <- 0;
+     cont30 <- 0;
+     cont27 <- 0;
+     cont15 <- 0;
+     
+     imprima "\n\tEm qual candidato deseja votar:\n\tCandidatoA (22) \n\tCandidatoB (30) \n\tCandidatoC (27) \n\tCandidatoD (15)";
+     imprima "\n\tNulo (5) \n\tBranco (6)";
+     faca
+     {
+
+         imprima "\n\nDigite seu candidato: ";
+         leia voto;
+         
+         se (voto <> 0)
+         {
+         tcont++; # Contador de votos
+                 se (voto == 22) # Contador votos candidado A
+                 {
+                  cont22++;
+                 }  
+                 
+                 se (voto == 30) # Contador votos candidado B
+                 {
+                  cont30++;
+                 } 
+                 
+                 se (voto == 27) # Contador votos candidado C
+                 {
+                  cont27++;
+                 } 
+                 
+                 se (voto == 15) # Contador votos candidado D
+                 {
+                  cont15++;
+                 }
+                 
+                 se (voto == 5) # Contador votos nulos
+                 {
+                 ncont++;
+                 }
+                 
+                 se (voto == 6) # Contador votos brancos
+                 {
+                 bcont++;
+                 }
+                 
+ 
+           
+         }
+         
+         
+     }
+     enquanto (voto <> 0)
+     
+              
+            imprima "\n\tVotos candidado A: ", cont22;
+            imprima "\n\tVotos candidado B: ", cont30;
+            imprima "\n\tVotos candidado C: ", cont27;
+            imprima "\n\tVotos candidado D: ", cont15;
+            imprima "\n\tVotos nulos: ", ncont;
+            imprima "\n\tVotos brancos: ", bcont;
+            imprima "\n\tTotal de votos recebidos: ", tcont;
+            imprima "\n\tPercentual de votos brancos e nulos sobre o total de votos: ", (ncont + bcont) * 100 / tcont, "%";
+            imprima "\n\n";
+            
+
+fimprog

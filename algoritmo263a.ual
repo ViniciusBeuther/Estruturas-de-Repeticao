@@ -1,0 +1,19 @@
+#ALGORITMO263a
+#Entrar com numeros enquanto forem positivos e imprimir quantos numeros foram digitados
+
+prog algoritmo263
+       int cont, n;
+       cont <- 0;
+       faca 
+       {
+        cont++;
+        imprima "\nDigite um numero (negativo para encerrar): ";
+        leia n;
+        
+       }
+       enquanto (n >= 0)
+       
+       imprima "\nContador: ", cont-1;
+       imprima "\n\n";
+
+fimprog

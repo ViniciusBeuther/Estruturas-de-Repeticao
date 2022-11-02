@@ -1,0 +1,17 @@
+#ALGORITMO262
+#Entrar com um numero e imprimir o triplo de cada numero. O algoritmo acaba quando entrar o numero -999
+
+prog algoritmo262
+       int numero;
+       imprima "\nDigite um numero: ";
+       leia numero;
+            enquanto (numero <> -999)
+            {
+            imprima "O triplo e: ", numero * 3;
+            imprima "\nDigite um numero ou (-999) para sair: ";
+            leia numero;
+            imprima "\n";
+            }
+            imprima "\n\n";
+
+fimprog

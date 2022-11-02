@@ -1,0 +1,69 @@
+#ALGORITMO310
+
+#Foi feita uma pesquisa de audiência de canal de TV em várias casas de uma certa 
+#cidade, em um determinado dia. 
+#Para cada casa visitada foram fornecidos o número do canal (4, 5, 7, 12) e o 
+#número de pessoas que estavam assistindo a ele naquela casa. Se a televisão 
+#estivesse 
+#desligada, nada seria anotado, ou seja, esta casa não entraria na pesquisa. Criar 
+#um algoritmo que: 
+# Leia um número indeterminado de dados, isto é, o número do canal e o 
+#número de pessoas que estavam assistindo; 
+#Calcule e imprima a porcentagem de audiência em cada canal. 
+#Para encerrar a entrada de dados, digite o número do canal zero.
+
+prog algoritmo310
+       int canal, espectadores, total, canal3, canal5, canal7, canal12, condicao;
+       total <- 0;
+       canal <- 1;
+       canal3 <- 0;
+       canal5 <- 0;
+       canal7 <- 0;
+       canal12 <- 0;
+       
+       enquanto (canal <> 0)
+       {
+                imprima "\n\nDigite o numero do canal (3, 5, 7, 12) 0 para encerrar: ";
+                leia canal;
+                
+                se (canal == 0|| canal <> 3 && canal <> 5 && canal <> 7 && canal <> 12)
+                {
+                
+                }
+                
+                senao
+                {
+                imprima "\nQuantos espectadores em sua casa: ";
+                leia espectadores;
+                
+                total <- total + espectadores;
+                
+                      se (canal == 3)
+                      {
+                       canal3 <- canal3 + espectadores;
+                      }
+                      
+                      se (canal == 5)
+                      {
+                       canal5 <- canal5 + espectadores;
+                      }
+                      
+                      se (canal == 7)
+                      {
+                       canal7 <- canal7 + espectadores;
+                      }
+                      
+                      se (canal == 12)
+                      {
+                       canal12 <- canal12 + espectadores;
+                      }                
+       }
+                 }
+                       
+                imprima "Total de espectadores: ", total;
+                imprima "\nMedia de espectadores canal 3: ", formatar(canal3 * 100 / total, 2), "%";
+                imprima "\nMedia de espectadores canal 5: ", formatar(canal5 * 100 / total, 2), "%";
+                imprima "\nMedia de espectadores canal 7: ", formatar(canal7 * 100 / total, 2), "%";
+                imprima "\nMedia de espectadores canal 12: ", formatar(canal12 * 100 / total, 2), "%";
+
+fimprog

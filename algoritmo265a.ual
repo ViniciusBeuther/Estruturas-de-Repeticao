@@ -1,0 +1,20 @@
+#ALGORITMO265a
+#Ler varios numeros e informar quantos numeros entre 100 e 200 foram digitados
+#Quando o valor for 0 (zero), o algoritmo deverá encerrar
+
+prog algoritmo265a
+       int cont, n;
+       cont <- 0;
+       faca
+       {
+        imprima "Digite um numero (0) para encerrar: ";
+        leia n;
+             se (n > 100 && n < 200)
+             {
+              cont++;
+             }
+       }
+       enquanto(n <> 0)
+                 imprima "\nNumeros entre 100 e 200 digitados: ", cont;
+                 imprima "\n\n";
+fimprog

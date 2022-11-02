@@ -1,0 +1,24 @@
+#ALGORITMO265
+#Ler varios numeros e informar quanntos numeros entre 100 e 200 foram digitados 
+#Quando o valor 0 for lido, o algoritmo devera cessar sua execução
+
+prog algoritmo265
+       int numero, cont;
+       cont <- 0;
+       imprima "\nDigite um numero ou (0) para sair: ";
+       leia numero;
+       
+       enquanto (numero <> 0)
+       {
+                se (numero >= 100 && numero <= 200)
+                {                                
+                cont++;
+                }
+                
+       imprima "\nDigite um numero ou (0) para sair: ";
+       leia numero;
+       }
+       imprima "\nTotal de numeros entre 100 e 200 digitados: ", cont;
+       imprima "\n\n";
+
+fimprog

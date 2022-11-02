@@ -1,0 +1,19 @@
+#ALGORITMO266a
+#Entrar com nomes enquanto forem diferentes de fim e imprimir o primeiro caractere de cada nome
+
+prog algoritmo266a
+       string nome, ultima;
+       
+       faca 
+       {
+        imprima "\nDigite seu nome (FIM para encerrar): ";
+        leia nome;
+             se (nome <> "FIM")
+             {
+                ultima <- strprim(nome);
+                imprima "Primeira letra: ", ultima;
+             }
+       }
+       enquanto(nome <> "FIM")
+       imprima "\nFIM DO PROGRAMA\n\n";
+fimprog

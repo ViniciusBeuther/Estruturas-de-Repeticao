@@ -1,0 +1,35 @@
+#Algoritmo276
+# Entrar com a idade de varias pessoas e imprimir:
+# -Total de pessoas com menos de 21 anos
+# -Total de pessoas com mais de 50 anos
+
+prog algoritmo276
+       int idade, menorcont, maiorcont;
+       menorcont <- 0;
+       maiorcont <- 0;
+       
+       imprima "\nDigite sua idade ou (0) para encerrar: ";
+       leia idade;
+       
+       enquanto(idade <> 0)
+       {     
+            imprima "\nDigite sua idade ou (0) para encerrar: ";
+            leia idade;
+                      
+                      
+            se(idade < 21)
+            {
+               menorcont++;
+            }
+            
+            se (idade > 50)
+            {
+               maiorcont++;
+            }
+                      
+       }
+       imprima "\nMaiores de 50 anos: ", maiorcont;
+       imprima "\nMenores de 21 anos: ", menorcont;
+       imprima "\n\n";
+
+fimprog

@@ -1,0 +1,32 @@
+#EXTRA 
+#Escreva um algoritmo que le um valor n inteiro e positivo e calcula a seguinte soma
+#           S= 1 + 1/2 + 1/3 + 1/4 + ... 1/n
+
+prog extra001
+     int n, i, j;
+     real soma;
+     j <- 0;
+     soma <- 0.0;
+        
+     imprima "\nDigite um numero: ";
+     leia n;
+     
+       se (n < 0)
+       {
+              imprima "\nENCERRADO!\n\n";
+          
+       } 
+       
+       senao
+       {
+              para (i <- 1; i <= n; i++)
+              {
+               j++;
+               soma <- soma + 1/j;
+              }
+              
+       }
+         imprima "A soma e: ", formatar(soma, 2);
+         imprima "\n\n";
+
+fimprog

@@ -1,0 +1,23 @@
+#ALGORITMO262a
+#Entrar com numeros e imprimir o tripllo de cada numero. O algoritmo aacba quando entrar com o numero -999
+
+prog algoritmo262a
+       real n;
+       
+       faca
+       {  
+        imprima "\nDigite um numero: ";
+        leia n;
+             se (n <> -999.0)
+             {
+              imprima "\nO TRIPLO: ", n * 3.0;
+             }
+             senao
+             {
+             imprima "\nFIM\n\n";
+             }
+       }
+       enquanto(n <> -999.0)
+       
+
+fimprog
