@@ -1,0 +1,87 @@
+#ALGORITMO311
+#Criar um algoritmo que calcule e imprima o CR do periodo para os alunos de 
+#programação 1 Para cada aluno o algoritmo devera ler, 
+ #número da matrícula; 
+ #quantidade de disciplinas cursadas; 
+ #notas em cada disciplina 
+#Alem do CR de cada aluno o algoritmo deve imprimir o melhor CR dos alunos que 
+#cursaram 5 ou mais disciplinas. 
+#m fim da entrada de dados e marcado por uma matrícula invanda (matriculas 
+#válidas: de 1 a 5000); 
+#CR do aluno e igual a media aritmética de suas notas
+
+prog algoritmo311
+       int matricula, cursadas, cont, flag, i, mmatricula;
+       real nota, soma, media, maior;
+       flag <- 0;
+       soma <- 0.0;
+       cont <- 0;
+       
+       imprima "\nSeu numero de matricula: ";
+       leia matricula;
+       
+       enquanto (matricula > 0 && matricula <= 5000)
+       {
+        
+        imprima "\nDigite quantas materias voce cursou: ";
+        leia cursadas;
+        
+             se(cursadas < 0)
+             {
+               imprima "\nErro\n";
+             }
+             
+             senao
+             {
+             
+              se (cursadas > 2)
+              {
+                  para (i <- 1; i <= cursadas; i++)
+                  {
+                       imprima "\nQual a nota 0", i, ": ";
+                       leia nota;
+                       
+                       cont++;
+                       soma <- soma + nota;
+                       
+                  }
+                  
+              media <- soma / cont;
+                    se (flag == 0)
+                    {
+                     maior <- media;
+                     flag <- 1;
+                    }
+                    
+                    senao
+                    {
+                         se (media > maior)
+                         {
+                          maior <- media;
+                          mmatricula <- matricula;
+                         }
+                    }
+              
+              imprima "\nMEDIA: ", formatar (media,2), "\n";
+                  
+               }
+               
+               senao 
+               {
+                  para (i <- 1; i <= cursadas; i++)
+                  {
+                  
+                    imprima "\nQual a nota 0", i, ": ";
+                    leia nota;
+                  }
+               }
+               
+               imprima "\nSeu numero de matricula: ";
+               leia matricula;
+             }
+             
+       }
+       
+       imprima "\nA maior media e da matricula ", mmatricula, ", com a media ", formatar(maior,2), "\n\n";
+
+fimprog

@@ -1,0 +1,59 @@
+#ALGORITMO316
+#Criar um algoritmo que receba a idade e o estado civil (C- casado, S- solteiro, 
+#Vviúvo e D- desquitado ou separado) de várias pessoas. Calcule e imprima: 
+#m a quantidade de pessoas casadas; 
+#m a quantidade de pessoas solteiras; 
+#m a média das idades das pessoas viúvas; 
+#E a porcentagem de pessoas desquitadas ou separadas dentre todas as 
+#pessoas analisadas. 
+#O algoritmo acaba quando se digita um número menor do que O para idade. 
+
+prog algoritmo316
+       int idade, contc, conts, contv, contd, somaidade;
+       string ec;
+       somaidade <- 0;
+       contc <- 0;
+       conts <- 0;
+       contv <- 0;
+       contd <- 0;
+       
+       imprima "\nDigite sua idade: ";
+       leia idade;
+       
+       enquanto(idade > 0)
+       {
+        imprima "\nDigite o seu estado civil (C-Casado, S-Solteiro, V-Viuvo(a) e D-Diverciado): ";
+        leia ec;
+        
+             se (ec == "C")
+             {
+              contc++;
+             }
+             
+             se (ec == "S")
+             {
+              conts++;
+             }
+             
+             se(ec == "V")
+             {
+              contv++;
+              somaidade <- idade + somaidade;
+             }
+       
+             se(ec == "D")
+             {
+              contd++;
+             }
+       
+        imprima "\nDigite sua idade: ";
+        leia idade;
+       }
+       
+        imprima "\nQuantidade de casados: ", contc;
+        imprima "\nQuantidade de solteiros: ", conts;
+        imprima "\nMedia de idade das viuvas: ", somaidade/contv;
+        imprima "\nQuantidade de divorciados: ", contd;
+        imprima "\n\n";
+
+fimprog

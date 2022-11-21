@@ -1,0 +1,66 @@
+#ALGORITMO315
+#
+#Uma ONG vai distribuir presentes de Natal para crianças de uma comunidade carente.
+# Para auxiliar na compra e controle dos brinquedos, criar um algoritmo em 
+#que todas as famílias serão cadastradas, tendo ou não crianças. Leia, para cada familha, 
+#a quantidade de crianças do sexo feminino e a quantidade de crianças do 
+#sexo masculino a leitura termina quando for digitado @ para cadastrar a família. 
+#Sabendo-se que um presente para menina custa R$12,00 e um presente para menino
+#custa R$11,00, imprima: 
+#m Q total gasto com presentes para meninos e o total para meninas 
+#O percentual de famílias beneficiadas com presentes para seus filhos
+
+prog algoritmo315
+        int meninoscont, meninascont, familiascont, beneficiadoscont, meninos, meninas;
+        string continuar, integrantes;
+        
+        meninoscont <- 0;
+        meninascont <- 0;
+        beneficiadoscont <- 0;
+        familiascont <- 0;
+        
+        imprima "\nDeseja iniciar (Sim, @ (encerrar)): ";
+        leia continuar;
+        
+        enquanto (continuar <> "@")
+        {
+         imprima "\nSua familia possui criancas (SIM ou NAO): ";
+         leia integrantes;
+         familiascont++;
+              
+              se(strprim (integrantes) == "S" || strprim (integrantes) == "s")#caso tenha filhos
+              {
+               imprima "\nDigite quantos meninos: ";
+               leia meninos;
+               
+               imprima "\nDigite quantas meninas: ";
+               leia meninas;
+               
+               se (meninos > 0)
+               {
+                meninoscont <- meninoscont + meninos;
+                
+               }
+               
+               se(meninas > 0)
+               {
+                meninascont <- meninascont + meninas;
+               }
+               beneficiadoscont++;
+              }
+              
+              senao #CASO NAO TENHA FILHOS
+              {
+               imprima "\nFamilia sem filhos!\n";
+              }
+        
+        
+        imprima "\nDeseja continuar (Sim, @ (encerrar)): ";
+        leia continuar;
+        }
+
+        imprima "\nBrinquedos de meninos: R$", 11 * meninoscont;
+        imprima "\nBrinquedos de meninas: R$", 12 * meninascont;
+        imprima "\nFamilias beneficiadas: ", beneficiadoscont * 100 / familiascont, "%";
+        imprima "\n\n";
+fimprog

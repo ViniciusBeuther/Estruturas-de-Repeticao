@@ -1,0 +1,63 @@
+#ALGORITMO314
+
+#Criar um algoritmo que receba o valor e o código de várias mercadorias vendidas 
+#em um determinado dia. Os códigos obedecem à lista a seguir: 
+#"L' -limpeza 
+#'A' - alimentação 
+#'H' - higiene 
+#Calcule e imprima: 
+#m o total vendido naquele dia, com todos os códigos juntos; 
+#m o total vendido naquele dia em cada um dos códigos. 
+#Para encerrar a entrada de dados, digite o valor da mercadoria zero.
+
+prog algoritmo314
+         string codigo;
+         real valor, lsoma, asoma, hsoma;
+         lsoma <- 0.0;
+         asoma <- 0.0;
+         hsoma <- 0.0;
+         valor <- 1.0;
+         
+         imprima "\nDigite o valor: R$";
+         leia valor;
+         
+         enquanto (valor > 0.0)
+         {
+          imprima "\nDIgite o codigo do produto (L-Limpeza, A-Alimentacao e H-Higiene): ";
+          leia codigo;
+          
+            se (codigo <> "L" && codigo <> "A" && codigo <> "H")
+            {
+             imprima "\nCodigo invalido\n";
+            }
+            
+            senao
+            {
+             se (codigo == "L")
+             {
+              lsoma <- lsoma + valor;
+             }
+             
+             se(codigo == "A")
+             {
+              asoma <- asoma + valor;
+             }
+             
+             se(codigo == "H")
+             {
+              hsoma <- hsoma + valor;
+             }
+             
+            }
+         
+         imprima "\nDigite o valor: R$";
+         leia valor;
+         }
+         
+             imprima "\nValor total vendido: R$", lsoma+hsoma+asoma;
+             imprima "\nValor vendido em Alimentacao: R$", asoma;
+             imprima "\nValor vendido em Higiene: R$", hsoma;
+             imprima "\nValor vendido em Limpeza: R$", lsoma;
+             imprima "\n\n";
+
+fimprog

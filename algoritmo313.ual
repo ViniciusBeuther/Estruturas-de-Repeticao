@@ -1,0 +1,62 @@
+#ALGORITMO313
+
+#Criar um algoritmo que receba a idade, a altura e o peso de várias pessoas. Calcu -
+#le e imprima: 
+# -a quantidade de pessoas com idade superior a 50 anos; 
+# -a média das alturas das pessoas com idade entre 10 e 20 anos; 
+# -a porcentagem de pessoas com peso inferior a 40 quilos entre todas as 
+#pessoas analisadas. 
+
+prog algoritmo313
+     int idade, contgeral, cont50, contaltura, contpeso, continuar;
+     real altura, peso, alturatotal;
+     continuar <- 1;
+     contgeral <- 0;
+     cont50 <- 0;
+     contaltura <- 0;
+     contpeso <- 0;
+     alturatotal <- 0.0;
+              
+              enquanto (continuar == 1)
+              {
+               imprima "\nDigite sua idade: ";
+               leia idade;
+               
+               imprima "\nDigite sua altura: ";
+               leia altura;
+               
+               imprima "\nDigite seu peso: ";
+               leia peso;
+               
+                    se (idade > 50)
+                    {
+                     cont50++;
+                    }
+                    
+                    senao
+                    {
+                         se (idade >= 10 && idade <= 20)
+                         {
+                          contaltura++;
+                          alturatotal <- alturatotal + altura;
+                         }
+                         
+
+                    }
+                    
+                    se (peso < 40.0)
+                    {
+                     contpeso++;
+                    }
+                   contgeral++;
+                   
+                   imprima "\nDeseja continuar (1-Sim : 0-Nao): ";
+                   leia continuar;
+              }
+              
+              imprima "\nNumero de pessoas com +50 anos: ", cont50;
+              imprima "\nMedia da altura de 10 a 20 anos: ", formatar(alturatotal/contaltura,2);
+              imprima "\nPercentual de pessoas com menos de 40kg; ", formatar(contpeso * 100/contgeral, 2), "%";
+              imprima "\n\n";
+              
+fimprog
